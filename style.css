@@ -1,10 +1,39 @@
+*, ::before, ::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+}
+
+button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    border-radius: 15%;
+    border: 1px solid white;
+    padding: 8px;
+}
+
 .gridclass {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    width: 400px;
+    height: 404px;
+    width: 404px;
     border: 2px solid black;
     margin: 0px;
 }
