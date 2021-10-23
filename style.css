@@ -1,0 +1,17 @@
+.gridclass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px dotted red;
+}
+
+.rowclass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid green;
+}
+
+.boxclass {
+    border: 2px solid blue;
+}
