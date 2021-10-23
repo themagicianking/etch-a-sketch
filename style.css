@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 100vh;
 }
@@ -16,6 +16,7 @@ body {
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 800;
+    margin: 10px;
 }
 
 button {
@@ -25,6 +26,11 @@ button {
     border-radius: 15%;
     border: 1px solid white;
     padding: 8px;
+    margin: 2px;
+}
+
+.buttonbox {
+    margin: 10px;
 }
 
 .gridclass {
@@ -35,15 +41,15 @@ button {
     height: 404px;
     width: 404px;
     border: 2px solid black;
-    margin: 0px;
+    margin: 10px;
 }
 
 .boxclass {
     display: flex;
     flex-grow: 1;
     flex-basis: 25px;
-    max-height: 25px;
-    max-width: 25px;
     min-height: 25px;
     min-width: 25px;
+    max-height: 25px;
+    max-width: 25px;
 }
