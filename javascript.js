@@ -22,7 +22,7 @@ function etch () {
     for (let i = 0; i < everyBox.length; i++) {
         everyBox[i].addEventListener("mouseenter", colorChange)
         function colorChange () {
-            everyBox[i].style.cssText = 'background: black';
+            everyBox[i].style.cssText = "background: black";
         }
     }
 
@@ -30,3 +30,11 @@ function etch () {
 }
 
 etch();
+
+document.getElementById("clear").addEventListener("click", test);
+
+function test () {
+    for (let i = 0; i < everyBox.length; i++) {
+        everyBox[i].style.cssText = "background: white";
+    }
+}
