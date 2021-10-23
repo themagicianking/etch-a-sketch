@@ -21,12 +21,13 @@ const everyBox = document.querySelectorAll("div.boxclass");
 
 function etch () {
     for (let i = 0; i < everyBox.length; i++) {
-        everyBox[i].addEventListener("click", testy)
+        everyBox[i].addEventListener("mouseenter", colorChange)
+        function colorChange () {
+            everyBox[i].style.cssText = 'background: black';
+        }
     }
 
-    function testy () {
-        console.log("It's working!!!!!");
-    }
+    
 }
 
 etch();
