@@ -5,7 +5,6 @@ document.body.appendChild(grid);
 function createBox () {
     let box = document.createElement("div");
     box.classList.add("boxclass");
-    box.textContent = "*";
     grid.appendChild(box);
 }
 
