@@ -44,11 +44,7 @@ button {
 .boxclass {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
     border: 2px solid blue;
-    flex-basis: 25px;
-    min-height: 25px;
-    min-width: 25px;
-    max-height: 25px;
-    max-width: 25px;
+    height: 25px;
+    width: 25px;
 }
