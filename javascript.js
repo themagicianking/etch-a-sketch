@@ -2,19 +2,23 @@ const grid = document.createElement("div");
 grid.classList.add("gridclass");
 document.body.appendChild(grid);
 
+let size = 16;
+
 function createBox () {
     let box = document.createElement("div");
     box.classList.add("boxclass");
+    box.style.width = `${400/size}px`;
+    box.style.height = `${400/size}px`;
     grid.appendChild(box);
 }
 
-function createDefaultGrid () {
-    for (i = 1; i <= 256; i++) {
-        createBox();
+function createGrid (size) {
+    for (i = 1; i <= size*size; i++) {
+        createBox(size);
     }
 }
 
-createDefaultGrid();
+createGrid(size);
 
 let everyBox = document.querySelectorAll("div.boxclass");
 
@@ -23,13 +27,13 @@ function etch () {
         everyBox[i].addEventListener("mouseenter", colorChange)
         function colorChange () {
             everyBox[i].style.cssText = "background: black";
+            everyBox[i].style.height = `${400/size}px`;
+            everyBox[i].style.width = `${400/size}px`;
         }
     }
-
-    
 }
 
-etch();
+etch(size);
 
 document.getElementById("clear").addEventListener("click", clearbutton);
 
@@ -37,15 +41,15 @@ function clearbutton () {
      for (let i = 0; i < everyBox.length; i++) {
          everyBox[i].parentNode.removeChild(everyBox[i]);
      }
-     gridsize = prompt("How many boxes would you like there to be in each row of your new grid?");
+     size = prompt("How many boxes would you like there to be in each row of your new grid?");
 
-     let totalboxes = gridsize * gridsize;
+     if (size > 100) {
+         size = 100;
+     }
 
-     for (i = 1; i <= totalboxes; i++) {
-        createBox();
-    }
+     createGrid(size);
 
-    everyBox = document.querySelectorAll("div.boxclass");
+     everyBox = document.querySelectorAll("div.boxclass");
 
-    etch();
+     etch(size);
 }
